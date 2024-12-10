@@ -15,6 +15,7 @@ function addBookToLibrary(title, author, pages, isRead) {
 
 function render() {
     const libraryBook = document.querySelector("#library");
+    libraryBook.innerHTML = "";
     for (let i = 0; i < myLibrary.length; i++) {
       const book = myLibrary[i]; // Get each book library array
       const bookEl = document.createElement("div") // Create a new div for the book
@@ -91,5 +92,4 @@ document.querySelector("#library").addEventListener("click", (event) => {
   }
 });
 
-myLibrary.push(new Book("Think Like a Programmer", "V. Anton Spraul", 256, true));
 render();
